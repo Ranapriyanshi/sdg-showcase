@@ -1,5 +1,5 @@
 .post-card {
-  background: white;
+  background: linear-gradient(135deg, white 0%, rgba(0, 41, 107, 0.02) 100%);
   border-radius: 30px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -17,7 +17,7 @@
   inset: 0;
   border-radius: 30px;
   padding: 2px;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -38,7 +38,7 @@
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background: var(--molten-lava);
+  background: linear-gradient(135deg, var(--imperial-blue) 0%, rgba(253, 197, 0, 0.3) 100%);
   position: relative;
 }
 
@@ -133,7 +133,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -142,7 +142,7 @@
 }
 
 .post-link:hover {
-  color: var(--brick-red);
+  color: var(--steel-azure);
   gap: 0.75rem;
 }
 
@@ -157,8 +157,8 @@
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid rgba(120, 0, 0, 0.2);
-  border-top-color: var(--molten-lava);
+  border: 4px solid rgba(0, 41, 107, 0.2);
+  border-top-color: var(--imperial-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

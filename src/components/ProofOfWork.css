@@ -10,11 +10,11 @@
 }
 
 .proof-card {
-  background: var(--bg-gradient-pastel);
+  background: linear-gradient(135deg, rgba(0, 41, 107, 0.05) 0%, #fffef0 50%, rgba(253, 197, 0, 0.05) 100%);
   border-radius: 35px;
   padding: 3rem;
   box-shadow: var(--shadow-medium);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 41, 107, 0.2);
 }
 
 .proof-header {
@@ -27,7 +27,7 @@
 .proof-icon {
   width: 80px;
   height: 80px;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   border-radius: 22px;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
 
 .proof-card:hover .proof-icon {
   transform: translateY(-5px) scale(1.1) rotate(5deg);
-  box-shadow: 0 12px 35px rgba(120, 0, 0, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 41, 107, 0.4);
 }
 
 .proof-card:hover .proof-icon::before {
@@ -108,7 +108,7 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 2px 4px rgba(96, 108, 56, 0.2));
 }
@@ -122,26 +122,27 @@
 .proof-link {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: var(--molten-lava);
-  color: white;
+  background: var(--school-bus-yellow);
+  color: #2c2c2c;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-colored);
-  border: 2px solid var(--olive-leaf);
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.15);
+  border: 2px solid #2c2c2c;
 }
 
 .proof-link:hover {
-  background: var(--brick-red);
-  border-color: var(--brick-red);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(120, 0, 0, 0.4);
+  background: var(--gold);
+  border-color: #2c2c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.25);
 }
 
-.proof-link:hover::before {
-  opacity: 1;
-}
 
 .proof-initiatives {
   background: white;
@@ -168,10 +169,10 @@
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: var(--bg-gradient-pastel);
+  background: linear-gradient(135deg, rgba(0, 41, 107, 0.08) 0%, rgba(253, 197, 0, 0.05) 100%);
   border-radius: 25px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 41, 107, 0.2);
 }
 
 .initiative-item:hover {

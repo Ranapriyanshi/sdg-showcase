@@ -5,43 +5,43 @@
 }
 
 :root {
-  /* New Color Palette */
-  --molten-lava: #780000;
-  --brick-red: #c1121f;
-  --papaya-whip: #fdf0d5;
-  --deep-space-blue: #003049;
-  --steel-blue: #669bbc;
+  /* New Blue & Yellow Color Palette */
+  --imperial-blue: #00296b;
+  --french-blue: #003f88;
+  --steel-azure: #00509d;
+  --school-bus-yellow: #fdc500;
+  --gold: #ffd500;
   
   /* Primary Colors */
-  --color-primary: var(--molten-lava);
-  --color-secondary: var(--brick-red);
-  --color-accent-1: var(--steel-blue);
-  --color-accent-2: var(--deep-space-blue);
-  --color-accent-3: var(--brick-red);
-  --color-accent-4: var(--steel-blue);
-  --color-accent-5: var(--deep-space-blue);
-  --color-accent-6: var(--brick-red);
+  --color-primary: var(--imperial-blue);
+  --color-secondary: var(--steel-azure);
+  --color-accent-1: var(--school-bus-yellow);
+  --color-accent-2: var(--gold);
+  --color-accent-3: var(--french-blue);
+  --color-accent-4: var(--school-bus-yellow);
+  --color-accent-5: var(--steel-azure);
+  --color-accent-6: var(--gold);
   
   /* SDG Colors (mapped to new palette) */
-  --sdg-4-blue: var(--steel-blue); /* Education - Steel Blue */
-  --sdg-5-pink: var(--brick-red); /* Gender Equality - Brick Red */
-  --sdg-9-orange: var(--molten-lava); /* Innovation - Molten Lava */
+  --sdg-4-blue: var(--steel-azure); /* Education - Steel Azure */
+  --sdg-5-pink: var(--school-bus-yellow); /* Gender Equality - School Bus Yellow */
+  --sdg-9-orange: var(--gold); /* Innovation - Gold */
   
   /* Backgrounds */
   --bg-light: #FFFFFF;
-  --bg-gradient-soft: linear-gradient(135deg, var(--papaya-whip) 0%, #faf0e0 50%, #f5ead0 100%);
-  --bg-gradient-pastel: linear-gradient(135deg, var(--papaya-whip) 0%, #fef5e5 50%, #faf0e0 100%);
+  --bg-gradient-soft: linear-gradient(135deg, #fef9e7 0%, #fff8dc 50%, #fffacd 100%);
+  --bg-gradient-pastel: linear-gradient(135deg, #fffef0 0%, #fff8dc 50%, #fef9e7 100%);
   
   /* Text Colors */
-  --text-dark: var(--deep-space-blue);
+  --text-dark: var(--imperial-blue);
   --text-light: #4a5568;
   --text-muted: #718096;
   
   /* 3D Effects */
-  --shadow-soft: 0 4px 20px rgba(0, 48, 73, 0.08);
-  --shadow-medium: 0 8px 30px rgba(0, 48, 73, 0.12);
-  --shadow-strong: 0 12px 40px rgba(0, 48, 73, 0.15);
-  --shadow-colored: 0 8px 25px rgba(120, 0, 0, 0.25);
+  --shadow-soft: 0 4px 20px rgba(0, 41, 107, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 41, 107, 0.12);
+  --shadow-strong: 0 12px 40px rgba(0, 41, 107, 0.15);
+  --shadow-colored: 0 8px 25px rgba(0, 41, 107, 0.25);
   
   /* Typography */
   --font-heading: 'Poppins', sans-serif;
@@ -51,7 +51,7 @@
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
-  background-color: var(--papaya-whip);
+  background-color: #fffef0;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -97,10 +97,10 @@ html {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(120, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 41, 107, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(120, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 41, 107, 0.5);
   }
 }
 

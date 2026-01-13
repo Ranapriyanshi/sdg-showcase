@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(135deg, var(--text-dark), #1a252f);
+  background: linear-gradient(135deg, var(--imperial-blue) 0%, var(--french-blue) 50%, var(--imperial-blue) 100%);
   color: white;
   padding: 4rem 0 2rem;
   margin-top: 4rem;
@@ -28,7 +28,7 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brick-red);
+  color: var(--school-bus-yellow);
   filter: drop-shadow(0 2px 4px rgba(96, 108, 56, 0.2));
 }
 

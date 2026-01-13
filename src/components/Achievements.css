@@ -1,5 +1,5 @@
 .achievements {
-  background: var(--bg-gradient-pastel);
+  background: linear-gradient(135deg, rgba(0, 41, 107, 0.03) 0%, #fffef0 50%, rgba(253, 197, 0, 0.03) 100%);
 }
 
 .achievements-content {
@@ -34,13 +34,13 @@
 }
 
 .achievement-item {
-  background: white;
+  background: linear-gradient(135deg, white 0%, rgba(253, 197, 0, 0.03) 100%);
   border-radius: 30px;
   padding: 3rem;
   text-align: center;
   box-shadow: var(--shadow-medium);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid var(--molten-lava);
+  border: 2px solid var(--imperial-blue);
   position: relative;
   max-width: 800px;
   margin: 0 auto;
@@ -57,7 +57,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   border-radius: 30px 30px 0 0;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -76,7 +76,7 @@
   width: 90px;
   height: 90px;
   margin: 0 auto 1.5rem;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@
 
 .achievement-item:hover .achievement-icon {
   transform: translateY(-5px) scale(1.1) rotate(5deg);
-  box-shadow: 0 12px 35px rgba(120, 0, 0, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 41, 107, 0.4);
 }
 
 .achievement-item:hover .achievement-icon::before {
@@ -152,9 +152,9 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid var(--molten-lava);
+  border: 2px solid var(--imperial-blue);
   background: white;
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -164,7 +164,7 @@
 }
 
 .carousel-btn:hover {
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   color: white;
   transform: scale(1.1);
   box-shadow: var(--shadow-colored);
@@ -185,7 +185,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--molten-lava);
+  border: 2px solid var(--imperial-blue);
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -193,13 +193,13 @@
 }
 
 .carousel-dot:hover {
-  background: var(--brick-red);
-  border-color: var(--brick-red);
+  background: var(--steel-azure);
+  border-color: var(--steel-azure);
   transform: scale(1.2);
 }
 
 .carousel-dot.active {
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   border-color: var(--olive-leaf);
   width: 32px;
   border-radius: 6px;

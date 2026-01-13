@@ -1,5 +1,5 @@
 .linkedin-posts {
-  background: var(--bg-gradient-pastel);
+  background: linear-gradient(135deg, #fffef0 0%, rgba(0, 41, 107, 0.04) 50%, #fffef0 100%);
 }
 
 .posts-intro {
@@ -34,24 +34,35 @@
 }
 
 .cta-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 1rem 2.5rem;
-  background: var(--molten-lava);
-  color: white;
+  background: var(--school-bus-yellow);
+  color: #2c2c2c;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-colored);
-  border: 2px solid var(--molten-lava);
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.15);
+  border: 2px solid #2c2c2c;
+}
+
+.cta-button .btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .cta-button:hover {
-  background: var(--brick-red);
-  border-color: var(--brick-red);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(120, 0, 0, 0.4);
+  background: var(--gold);
+  border-color: #2c2c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.25);
 }
 
 .cta-button:hover::before {

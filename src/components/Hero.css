@@ -5,7 +5,7 @@
   padding: 120px 20px 80px;
   position: relative;
   overflow: hidden;
-  background: var(--bg-gradient-pastel);
+  background: linear-gradient(135deg, #fffef0 0%, rgba(253, 197, 0, 0.05) 50%, #fffef0 100%);
 }
 
 .hero-container {
@@ -32,7 +32,7 @@
 .shape-1 {
   width: 200px;
   height: 200px;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   top: 10%;
   right: 10%;
   animation: float 8s ease-in-out infinite;
@@ -41,7 +41,7 @@
 .shape-2 {
   width: 150px;
   height: 150px;
-  background: var(--brick-red);
+  background: var(--steel-azure);
   bottom: 20%;
   left: 5%;
   animation: float-reverse 10s ease-in-out infinite;
@@ -51,7 +51,7 @@
 .shape-3 {
   width: 120px;
   height: 120px;
-  background: var(--steel-blue);
+  background: var(--school-bus-yellow);
   top: 50%;
   right: 20%;
   animation: float 12s ease-in-out infinite;
@@ -61,7 +61,7 @@
 .shape-4 {
   width: 180px;
   height: 180px;
-  background: var(--brick-red);
+  background: var(--gold);
   bottom: 10%;
   right: 15%;
   animation: float-reverse 9s ease-in-out infinite;
@@ -75,9 +75,9 @@
 .hero-badge {
   display: inline-block;
   padding: 0.6rem 1.8rem;
-  background: var(--molten-lava);
+  background: var(--imperial-blue);
   color: white;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -113,8 +113,8 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--molten-lava);
-  filter: drop-shadow(0 2px 4px rgba(120, 0, 0, 0.2));
+  color: var(--imperial-blue);
+  filter: drop-shadow(0 2px 4px rgba(0, 41, 107, 0.2));
 }
 
 .hero-tagline {
@@ -142,47 +142,53 @@
 
 .btn {
   padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 2px solid #2c2c2c;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: var(--font-body);
+  font-family: 'Montserrat', sans-serif;
   position: relative;
   overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .btn-primary {
-  background: var(--olive-leaf);
-  color: white;
-  box-shadow: var(--shadow-colored);
-  border: 2px solid var(--olive-leaf);
+  background: var(--school-bus-yellow);
+  color: #2c2c2c;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.15);
+  border: 2px solid #2c2c2c;
 }
 
 .btn-primary:hover {
-  background: var(--sunlit-clay);
-  border-color: var(--sunlit-clay);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(96, 108, 56, 0.4);
-}
-
-.btn-primary:hover::before {
-  opacity: 1;
+  background: var(--gold);
+  border-color: #2c2c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.25);
 }
 
 .btn-secondary {
   background: white;
-  color: var(--olive-leaf);
-  border: 2px solid var(--olive-leaf);
-  box-shadow: var(--shadow-soft);
+  color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.1);
 }
 
 .btn-secondary:hover {
-  background: var(--olive-leaf);
-  color: white;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: var(--shadow-colored);
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.2);
 }
 
 .hero-sdg-badges {
@@ -193,7 +199,7 @@
 
 .sdg-badge {
   padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  border-radius: 6px;
   font-weight: 600;
   font-size: 0.9rem;
   color: white;
@@ -226,26 +232,27 @@
 }
 
 .sdg-badge.sdg-4 {
-  background: var(--steel-blue);
-  box-shadow: 0 6px 20px rgba(102, 155, 188, 0.35);
+  background: var(--steel-azure);
+  box-shadow: 0 6px 20px rgba(0, 80, 157, 0.35);
 }
 
 .sdg-badge.sdg-5 {
-  background: var(--brick-red);
-  box-shadow: 0 6px 20px rgba(193, 18, 31, 0.35);
+  background: var(--school-bus-yellow);
+  box-shadow: 0 6px 20px rgba(253, 197, 0, 0.35);
 }
 
 .sdg-badge.sdg-9 {
-  background: var(--molten-lava);
-  box-shadow: 0 6px 20px rgba(120, 0, 0, 0.35);
+  background: var(--gold);
+  box-shadow: 0 6px 20px rgba(255, 213, 0, 0.35);
 }
 
 .hero-visual {
   position: relative;
-  height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px;
 }
 
 .hero-photo-container {
@@ -255,6 +262,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 2;
 }
 
 .hero-photo {
@@ -264,8 +272,9 @@
   border-radius: 30px;
   object-fit: cover;
   box-shadow: var(--shadow-medium);
-  border: 4px solid var(--papaya-whip);
-  animation: float 6s ease-in-out infinite;
+  border: 4px solid #fffef0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-photo-placeholder {
@@ -281,7 +290,61 @@
   font-size: 1.5rem;
   font-weight: 600;
   box-shadow: var(--shadow-medium);
-  border: 4px solid var(--papaya-whip);
+  border: 4px solid #fffef0;
+}
+
+.hero-cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 400px;
+  height: 500px;
+  z-index: 0;
+}
+
+.hero-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 41, 107, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card-bottom {
+  background: linear-gradient(135deg, var(--school-bus-yellow) 0%, var(--gold) 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(-40px, 0) rotate(-12deg);
+  transform-origin: top center;
+  z-index: 0;
+  opacity: 0.85;
+  animation: float-card-bottom 6s ease-in-out infinite;
+}
+
+.hero-card-top {
+  background: linear-gradient(135deg, var(--imperial-blue) 0%, var(--french-blue) 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(40px, 0) rotate(12deg);
+  transform-origin: top center;
+  z-index: 1;
+  opacity: 0.9;
+  animation: float-card-top 8s ease-in-out infinite;
+}
+
+.hero-card-bottom:hover {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) translate(-40px, -5px) rotate(-12deg);
+  box-shadow: 0 8px 30px rgba(0, 41, 107, 0.3);
+}
+
+.hero-card-top:hover {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) translate(40px, -5px) rotate(12deg);
+  box-shadow: 0 8px 30px rgba(0, 41, 107, 0.3);
 }
 
 @keyframes fadeInUp {
@@ -310,6 +373,24 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes float-card-bottom {
+  0%, 100% {
+    transform: translate(-50%, -50%) translate(-40px, 0) rotate(-12deg) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-40px, 0) rotate(-12deg) translateY(-30px);
+  }
+}
+
+@keyframes float-card-top {
+  0%, 100% {
+    transform: translate(-50%, -50%) translate(40px, 0) rotate(12deg) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(40px, 0) rotate(12deg) translateY(-25px);
   }
 }
 

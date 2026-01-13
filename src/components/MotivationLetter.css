@@ -1,5 +1,5 @@
 .motivation-letter {
-  background: white;
+  background: linear-gradient(135deg, rgba(0, 41, 107, 0.02) 0%, white 20%, white 80%, rgba(253, 197, 0, 0.02) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -18,22 +18,22 @@
 }
 
 .letter-paper {
-  background: var(--papaya-whip);
+  background: #fffef0;
   border-radius: 8px;
   padding: 3rem 4rem;
   box-shadow: 
-    0 0 0 1px rgba(40, 54, 24, 0.1),
-    0 10px 40px rgba(40, 54, 24, 0.15),
-    0 20px 60px rgba(40, 54, 24, 0.1);
+    0 0 0 1px rgba(0, 41, 107, 0.1),
+    0 10px 40px rgba(0, 41, 107, 0.15),
+    0 20px 60px rgba(0, 41, 107, 0.1);
   position: relative;
   background-image: 
     repeating-linear-gradient(
       transparent,
       transparent 31px,
-      rgba(40, 54, 24, 0.03) 31px,
-      rgba(40, 54, 24, 0.03) 32px
+      rgba(0, 41, 107, 0.03) 31px,
+      rgba(0, 41, 107, 0.03) 32px
     );
-  border: 2px solid rgba(40, 54, 24, 0.1);
+  border: 2px solid rgba(0, 41, 107, 0.1);
 }
 
 .letter-paper::before {
@@ -43,14 +43,14 @@
   left: 60px;
   width: 2px;
   height: 100%;
-  background: rgba(221, 161, 94, 0.3);
+  background: rgba(253, 197, 0, 0.3);
   opacity: 0.5;
 }
 
 .letter-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid rgba(40, 54, 24, 0.1);
+  border-bottom: 2px solid rgba(0, 41, 107, 0.1);
   position: relative;
 }
 
@@ -59,7 +59,7 @@
   background: linear-gradient(
     to right,
     transparent,
-    rgba(40, 54, 24, 0.2),
+    rgba(0, 41, 107, 0.2),
     transparent
   );
   margin-bottom: 0.5rem;
@@ -94,14 +94,14 @@
   float: left;
   margin-right: 0.5rem;
   margin-top: 0.2rem;
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   font-weight: 700;
 }
 
 .letter-footer {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 2px solid rgba(40, 54, 24, 0.1);
+  border-top: 2px solid rgba(0, 41, 107, 0.1);
   text-align: right;
 }
 
@@ -121,7 +121,7 @@
 .letter-signature p {
   font-family: 'Georgia', serif;
   font-style: italic;
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   font-size: 1.1rem;
   margin: 0;
 }
@@ -133,7 +133,7 @@
   transform: translateX(-50%);
   width: 80%;
   height: 40px;
-  background: rgba(40, 54, 24, 0.1);
+  background: rgba(0, 41, 107, 0.1);
   border-radius: 50%;
   filter: blur(20px);
   z-index: -1;
@@ -141,29 +141,35 @@
 }
 
 .motivation-text strong {
-  color: var(--molten-lava);
+  color: var(--imperial-blue);
   font-weight: 600;
 }
 
 .sdg-highlight {
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
-  font-weight: 600;
-  color: white;
-  display: inline-block;
-  margin: 0 0.2rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-weight: 500;
+  color: inherit;
+  display: inline;
+  margin: 0;
+  background: transparent;
+  border-bottom: 2px solid;
+  text-decoration: none;
 }
 
 .sdg-highlight.sdg-4 {
-  background: var(--sdg-4-blue);
+  border-bottom-color: rgba(0, 80, 157, 0.3);
+  color: rgba(0, 80, 157, 0.7);
 }
 
 .sdg-highlight.sdg-5 {
-  background: var(--sdg-5-pink);
+  border-bottom-color: rgba(253, 197, 0, 0.4);
+  color: rgba(253, 197, 0, 0.8);
 }
 
 .sdg-highlight.sdg-9 {
-  background: var(--sdg-9-orange);
+  border-bottom-color: rgba(255, 213, 0, 0.4);
+  color: rgba(255, 213, 0, 0.8);
 }
 
 .motivation-sdg-visual {
@@ -206,15 +212,15 @@
 }
 
 .sdg-card-4 {
-  border-left-color: var(--sdg-4-blue);
+  border-left-color: var(--steel-azure);
 }
 
 .sdg-card-5 {
-  border-left-color: var(--sdg-5-pink);
+  border-left-color: var(--school-bus-yellow);
 }
 
 .sdg-card-9 {
-  border-left-color: var(--sdg-9-orange);
+  border-left-color: var(--gold);
 }
 
 .sdg-icon {
