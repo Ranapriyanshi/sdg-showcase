@@ -1,0 +1,226 @@
+.proof-of-work {
+  background: white;
+}
+
+.proof-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.proof-card {
+  background: var(--bg-gradient-pastel);
+  border-radius: 35px;
+  padding: 3rem;
+  box-shadow: var(--shadow-medium);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.proof-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.proof-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--molten-lava);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-colored);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.proof-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proof-card:hover .proof-icon {
+  transform: translateY(-5px) scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(120, 0, 0, 0.4);
+}
+
+.proof-card:hover .proof-icon::before {
+  opacity: 1;
+}
+
+.proof-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.proof-title-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.proof-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.proof-body {
+  color: var(--text-dark);
+}
+
+.proof-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.proof-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--molten-lava);
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(96, 108, 56, 0.2));
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.proof-link {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--molten-lava);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-colored);
+  border: 2px solid var(--olive-leaf);
+}
+
+.proof-link:hover {
+  background: var(--brick-red);
+  border-color: var(--brick-red);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(120, 0, 0, 0.4);
+}
+
+.proof-link:hover::before {
+  opacity: 1;
+}
+
+.proof-initiatives {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.initiatives-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.initiative-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.initiative-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-gradient-pastel);
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.initiative-item:hover {
+  transform: translateX(8px) translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.initiative-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.initiative-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.initiative-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .proof-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proof-card {
+    padding: 2rem;
+  }
+
+  .proof-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .proof-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,316 @@
+.motivation-letter {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.motivation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Letter Container */
+.letter-container {
+  position: relative;
+  perspective: 1000px;
+  min-height: 600px;
+}
+
+.letter-paper {
+  background: var(--papaya-whip);
+  border-radius: 8px;
+  padding: 3rem 4rem;
+  box-shadow: 
+    0 0 0 1px rgba(40, 54, 24, 0.1),
+    0 10px 40px rgba(40, 54, 24, 0.15),
+    0 20px 60px rgba(40, 54, 24, 0.1);
+  position: relative;
+  background-image: 
+    repeating-linear-gradient(
+      transparent,
+      transparent 31px,
+      rgba(40, 54, 24, 0.03) 31px,
+      rgba(40, 54, 24, 0.03) 32px
+    );
+  border: 2px solid rgba(40, 54, 24, 0.1);
+}
+
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 2px;
+  height: 100%;
+  background: rgba(221, 161, 94, 0.3);
+  opacity: 0.5;
+}
+
+.letter-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(40, 54, 24, 0.1);
+  position: relative;
+}
+
+.letter-lines {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(40, 54, 24, 0.2),
+    transparent
+  );
+  margin-bottom: 0.5rem;
+}
+
+.letter-content {
+  position: relative;
+  z-index: 1;
+}
+
+.motivation-text {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--text-dark);
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.motivation-text p {
+  margin-bottom: 1.5rem;
+  text-indent: 2rem;
+  position: relative;
+}
+
+.motivation-text p:first-child {
+  text-indent: 0;
+}
+
+.motivation-text p:first-child::first-letter {
+  font-size: 3rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  color: var(--molten-lava);
+  font-weight: 700;
+}
+
+.letter-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(40, 54, 24, 0.1);
+  text-align: right;
+}
+
+.letter-signature {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.signature-line {
+  width: 200px;
+  height: 1px;
+  background: var(--text-dark);
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+}
+
+.letter-signature p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: var(--molten-lava);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.letter-shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 40px;
+  background: rgba(40, 54, 24, 0.1);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.motivation-text strong {
+  color: var(--molten-lava);
+  font-weight: 600;
+}
+
+.sdg-highlight {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+
+.sdg-highlight.sdg-4 {
+  background: var(--sdg-4-blue);
+}
+
+.sdg-highlight.sdg-5 {
+  background: var(--sdg-5-pink);
+}
+
+.sdg-highlight.sdg-9 {
+  background: var(--sdg-9-orange);
+}
+
+.motivation-sdg-visual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sdg-card {
+  background: white;
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 5px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.sdg-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.05), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sdg-card:hover::before {
+  opacity: 1;
+}
+
+.sdg-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+
+.sdg-card-4 {
+  border-left-color: var(--sdg-4-blue);
+}
+
+.sdg-card-5 {
+  border-left-color: var(--sdg-5-pink);
+}
+
+.sdg-card-9 {
+  border-left-color: var(--sdg-9-orange);
+}
+
+.sdg-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sdg-card:hover .sdg-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.sdg-card-4 .sdg-icon {
+  background: var(--sdg-4-blue);
+}
+
+.sdg-card-5 .sdg-icon {
+  background: var(--sdg-5-pink);
+}
+
+.sdg-card-9 .sdg-icon {
+  background: var(--sdg-9-orange);
+}
+
+.sdg-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.sdg-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .motivation-content {
+    gap: 3rem;
+  }
+
+  .letter-paper {
+    padding: 2rem 2.5rem;
+  }
+
+  .letter-paper::before {
+    left: 40px;
+  }
+
+  .motivation-sdg-visual {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .letter-container {
+    min-height: 500px;
+  }
+
+  .letter-paper {
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+  }
+
+  .letter-paper::before {
+    left: 30px;
+  }
+
+  .motivation-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .motivation-text p:first-child::first-letter {
+    font-size: 2.5rem;
+  }
+
+  .letter-shadow {
+    width: 90%;
+    height: 30px;
+  }
+
+  .motivation-sdg-visual {
+    grid-template-columns: 1fr;
+  }
+}

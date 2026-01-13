@@ -1,0 +1,40 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Smooth scroll behavior */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--olive-leaf);
+  filter: drop-shadow(0 2px 4px rgba(96, 108, 56, 0.15));
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+}

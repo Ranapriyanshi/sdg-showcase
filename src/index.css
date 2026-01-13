@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* New Color Palette */
+  --molten-lava: #780000;
+  --brick-red: #c1121f;
+  --papaya-whip: #fdf0d5;
+  --deep-space-blue: #003049;
+  --steel-blue: #669bbc;
+  
+  /* Primary Colors */
+  --color-primary: var(--molten-lava);
+  --color-secondary: var(--brick-red);
+  --color-accent-1: var(--steel-blue);
+  --color-accent-2: var(--deep-space-blue);
+  --color-accent-3: var(--brick-red);
+  --color-accent-4: var(--steel-blue);
+  --color-accent-5: var(--deep-space-blue);
+  --color-accent-6: var(--brick-red);
+  
+  /* SDG Colors (mapped to new palette) */
+  --sdg-4-blue: var(--steel-blue); /* Education - Steel Blue */
+  --sdg-5-pink: var(--brick-red); /* Gender Equality - Brick Red */
+  --sdg-9-orange: var(--molten-lava); /* Innovation - Molten Lava */
+  
+  /* Backgrounds */
+  --bg-light: #FFFFFF;
+  --bg-gradient-soft: linear-gradient(135deg, var(--papaya-whip) 0%, #faf0e0 50%, #f5ead0 100%);
+  --bg-gradient-pastel: linear-gradient(135deg, var(--papaya-whip) 0%, #fef5e5 50%, #faf0e0 100%);
+  
+  /* Text Colors */
+  --text-dark: var(--deep-space-blue);
+  --text-light: #4a5568;
+  --text-muted: #718096;
+  
+  /* 3D Effects */
+  --shadow-soft: 0 4px 20px rgba(0, 48, 73, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 48, 73, 0.12);
+  --shadow-strong: 0 12px 40px rgba(0, 48, 73, 0.15);
+  --shadow-colored: 0 8px 25px rgba(120, 0, 0, 0.25);
+  
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--papaya-whip);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-5deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(120, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(120, 0, 0, 0.5);
+  }
+}
+
+/* Floating decorative elements */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2n) {
+  animation: float-reverse 8s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.floating-element:nth-child(3n) {
+  animation: float 10s ease-in-out infinite;
+  animation-delay: -4s;
+}
