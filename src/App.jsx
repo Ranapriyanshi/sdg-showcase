@@ -2,8 +2,9 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import MotivationLetter from './components/MotivationLetter'
 import Achievements from './components/Achievements'
-import ProofOfWork from './components/ProofOfWork'
 import LinkedInPosts from './components/LinkedInPosts'
+import ImageGallery from './components/ImageGallery'
+import ProofOfWork from './components/ProofOfWork'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
       <MotivationLetter />
       <Achievements />
       <LinkedInPosts />
+      <ImageGallery />
       <ProofOfWork />
       <Footer />
     </div>

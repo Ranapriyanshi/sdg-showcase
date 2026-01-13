@@ -38,23 +38,6 @@ const MotivationLetter = () => {
             </div>
             <div className="letter-shadow"></div>
           </div>
-          <div className="motivation-sdg-visual">
-            <div className="sdg-card sdg-card-4">
-              <div className="sdg-icon">4</div>
-              <h3>Quality Education</h3>
-              <p>Ensuring inclusive and equitable quality education for all</p>
-            </div>
-            <div className="sdg-card sdg-card-5">
-              <div className="sdg-icon">5</div>
-              <h3>Gender Equality</h3>
-              <p>Achieving gender equality and empowering all women and girls</p>
-            </div>
-            <div className="sdg-card sdg-card-9">
-              <div className="sdg-icon">9</div>
-              <h3>Innovation & Infrastructure</h3>
-              <p>Building resilient infrastructure and fostering innovation</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

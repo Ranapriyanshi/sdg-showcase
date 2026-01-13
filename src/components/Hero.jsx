@@ -1,5 +1,5 @@
 import './Hero.css'
-import photo from '../../public/Priyanshi_India.png'
+import photo from '../assets/Priyanshi_India.png'
 
 /* 
   Icon Attributions:

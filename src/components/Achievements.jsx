@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import './Achievements.css'
 
 const Achievements = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
   const achievements = [
     {
       icon: (
@@ -41,74 +38,21 @@ const Achievements = () => {
     }
   ]
 
-  const nextCard = () => {
-    setCurrentIndex((prev) => (prev + 1) % achievements.length)
-  }
-
-  const prevCard = () => {
-    setCurrentIndex((prev) => (prev - 1 + achievements.length) % achievements.length)
-  }
-
-  const goToCard = (index) => {
-    setCurrentIndex(index)
-  }
-
   return (
     <section id="achievements" className="achievements section">
       <div className="container">
         <h2 className="section-title">What I Hope to Achieve</h2>
-        <div className="achievements-content">
-          <div className="carousel-container">
-            <div className="carousel-wrapper">
-              <div 
-                className="carousel-track"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {achievements.map((achievement, index) => (
-                  <div key={index} className="carousel-slide">
-                    <div className="achievement-item">
-                      <div className="achievement-icon">
-                        {achievement.icon}
-                      </div>
-                      <h3>{achievement.title}</h3>
-                      <p className="achievement-description">{achievement.description}</p>
-                      <p className="achievement-text">{achievement.text}</p>
-                    </div>
-                  </div>
-                ))}
+        <div className="achievements-grid">
+          {achievements.map((achievement, index) => (
+            <div key={index} className={`achievement-card card-${index + 1}`}>
+              <div className="achievement-icon">
+                {achievement.icon}
               </div>
+              <h3>{achievement.title}</h3>
+              <p className="achievement-description">{achievement.description}</p>
+              <p className="achievement-text">{achievement.text}</p>
             </div>
-            <div className="carousel-controls">
-              <button 
-                className="carousel-btn carousel-btn-prev"
-                onClick={prevCard}
-                aria-label="Previous card"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M15 18l-6-6 6-6"/>
-                </svg>
-              </button>
-              <div className="carousel-dots">
-                {achievements.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
-                    onClick={() => goToCard(index)}
-                    aria-label={`Go to card ${index + 1}`}
-                  />
-                ))}
-              </div>
-              <button 
-                className="carousel-btn carousel-btn-next"
-                onClick={nextCard}
-                aria-label="Next card"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

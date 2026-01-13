@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PostCard from './PostCard'
+import { linkedInPosts, linkedInProfileUrl } from '../config/linkedinPosts'
 import './LinkedInPosts.css'
 
 /* 
@@ -8,37 +9,26 @@ import './LinkedInPosts.css'
 */
 
 const LinkedInPosts = () => {
-  // To add your LinkedIn posts:
-  // 1. Get the post URL from LinkedIn (share button > copy link)
-  // 2. Add a new object to the posts array with:
-  //    - id: unique number
-  //    - url: full LinkedIn post URL
-  //    - title: post title or main topic
-  //    - excerpt: preview text (first 100-150 characters)
-  //    - thumbnail: optional image URL (if post has an image)
-  const [posts] = useState([
-    {
-      id: 1,
-      url: 'https://www.linkedin.com/feed/update/example1',
-      title: 'Gender Equality in Tech',
-      excerpt: 'Sharing insights on creating inclusive workplaces and empowering women in technology. Let\'s break barriers together!',
-      thumbnail: null
-    },
-    {
-      id: 2,
-      url: 'https://www.linkedin.com/feed/update/example2',
-      title: 'Education for All',
-      excerpt: 'Reflecting on my experiences working with students from economically disadvantaged backgrounds and the power of education to transform lives.',
-      thumbnail: null
-    },
-    {
-      id: 3,
-      url: 'https://www.linkedin.com/feed/update/example3',
-      title: 'SDG Advocacy',
-      excerpt: 'How technology and innovation can drive progress towards Sustainable Development Goals. Join the conversation!',
-      thumbnail: null
-    }
-  ])
+  const [carouselIndex, setCarouselIndex] = useState(0)
+  
+  // Posts are now loaded from config file for easier management
+  // Edit src/config/linkedinPosts.js to add/update your posts
+  const [posts] = useState(linkedInPosts)
+
+  // All posts in carousel for better carousel experience
+  const mainPosts = [] // No separate main grid
+  const carouselPosts = posts // All posts in carousel
+  const postsPerSlide = 2
+  
+  const totalSlides = Math.ceil(carouselPosts.length / postsPerSlide)
+
+  const nextCarousel = () => {
+    setCarouselIndex((prev) => (prev + 1) % totalSlides)
+  }
+
+  const prevCarousel = () => {
+    setCarouselIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
 
   return (
     <section id="posts" className="linkedin-posts section">
@@ -48,21 +38,85 @@ const LinkedInPosts = () => {
           Through my LinkedIn platform, I consistently share content related to gender equality, 
           inclusive workplaces, and women's empowerment. Here are some of my recent posts:
         </p>
-        <div className="posts-grid">
-          {posts.map((post) => (
-            <PostCard
-              key={post.id}
-              postUrl={post.url}
-              title={post.title}
-              excerpt={post.excerpt}
-              thumbnail={post.thumbnail}
-            />
-          ))}
-        </div>
+        
+        {/* Carousel for all posts */}
+        {carouselPosts.length > 0 && (
+          <div className="posts-carousel-section">
+            <div className="carousel-container">
+              <div className="carousel-wrapper">
+                <div 
+                  className="carousel-track"
+                  style={{ 
+                    transform: `translateX(-${(carouselIndex * 100) / totalSlides}%)`,
+                    width: `${totalSlides * 100}%`
+                  }}
+                >
+                  {Array.from({ length: totalSlides }).map((_, groupIndex) => {
+                    const slidePosts = carouselPosts.slice(groupIndex * postsPerSlide, (groupIndex + 1) * postsPerSlide)
+                    return (
+                      <div 
+                        key={groupIndex} 
+                        className="carousel-slide"
+                        style={{ width: `${100 / totalSlides}%` }}
+                      >
+                        <div className="carousel-grid">
+                          {slidePosts.map((post) => (
+                            <PostCard
+                              key={post.id}
+                              postUrl={post.url}
+                              title={post.title}
+                              excerpt={post.excerpt}
+                              thumbnail={post.thumbnail}
+                              badge={post.badge}
+                              badgeColor={post.badgeColor}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+              {totalSlides > 1 && (
+                <div className="carousel-controls">
+                  <button 
+                    className="carousel-btn carousel-btn-prev"
+                    onClick={prevCarousel}
+                    aria-label="Previous posts"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                  </button>
+                  <div className="carousel-dots">
+                    {Array.from({ length: totalSlides }).map((_, index) => (
+                      <button
+                        key={index}
+                        className={`carousel-dot ${index === carouselIndex ? 'active' : ''}`}
+                        onClick={() => setCarouselIndex(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                  <button 
+                    className="carousel-btn carousel-btn-next"
+                    onClick={nextCarousel}
+                    aria-label="Next posts"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="posts-cta">
           <p>Want to see more? Connect with me on LinkedIn!</p>
           <a 
-            href="https://www.linkedin.com/in/priyanshi-rana" 
+            href={linkedInProfileUrl}
             target="_blank" 
             rel="noopener noreferrer"
             className="cta-button"
