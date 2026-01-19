@@ -5,7 +5,7 @@
   padding: 120px 20px 80px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #fffef0 0%, rgba(253, 197, 0, 0.05) 50%, #fffef0 100%);
+  background: transparent;
 }
 
 .hero-container {
@@ -74,14 +74,14 @@
 
 .hero-badge {
   display: inline-block;
-  padding: 0.6rem 1.8rem;
-  background: var(--imperial-blue);
-  color: white;
-  border-radius: 8px;
+  padding: 0.55rem 1.6rem;
+  background: #1b1b1b;
+  color: #fdf7ee;
+  border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-colored);
+  box-shadow: var(--theme-shadow-soft);
   position: relative;
   overflow: hidden;
 }
@@ -113,21 +113,21 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--imperial-blue);
-  filter: drop-shadow(0 2px 4px rgba(0, 41, 107, 0.2));
+  color: var(--theme-ink);
+  filter: none;
 }
 
 .hero-tagline {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--theme-ink-soft);
   line-height: 1.3;
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: var(--text-light);
+  color: #3a3a3a;
   line-height: 1.8;
   margin-bottom: 2.5rem;
   max-width: 500px;
@@ -141,11 +141,11 @@
 }
 
 .btn {
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2.2rem;
   font-size: 0.95rem;
   font-weight: 700;
-  border: 2px solid #2c2c2c;
-  border-radius: 8px;
+  border: 2px solid #1b1b1b;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Montserrat', sans-serif;
@@ -165,30 +165,30 @@
 }
 
 .btn-primary {
-  background: var(--school-bus-yellow);
-  color: #2c2c2c;
-  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.15);
-  border: 2px solid #2c2c2c;
+  background: #1b1b1b;
+  color: #fdf7ee;
+  box-shadow: var(--theme-shadow-soft);
+  border: 2px solid #1b1b1b;
 }
 
 .btn-primary:hover {
-  background: var(--gold);
-  border-color: #2c2c2c;
+  background: #000;
+  border-color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.25);
+  box-shadow: var(--theme-shadow);
 }
 
 .btn-secondary {
-  background: white;
-  color: #2c2c2c;
-  border: 2px solid #2c2c2c;
-  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.1);
+  background: #fff;
+  color: #1b1b1b;
+  border: 2px solid #1b1b1b;
+  box-shadow: var(--theme-shadow-soft);
 }
 
 .btn-secondary:hover {
-  background: #f5f5f5;
+  background: #f8f4ee;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.2);
+  box-shadow: var(--theme-shadow);
 }
 
 .hero-sdg-badges {

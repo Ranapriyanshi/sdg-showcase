@@ -25,8 +25,9 @@ section {
   font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--olive-leaf);
-  filter: drop-shadow(0 2px 4px rgba(96, 108, 56, 0.15));
+  color: var(--theme-ink);
+  letter-spacing: -0.02em;
+  filter: none;
 }
 
 @media (max-width: 768px) {
