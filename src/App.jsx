@@ -14,9 +14,9 @@ function App() {
       <Header />
       <Hero />
       <MotivationLetter />
-      <Achievements />
       <LinkedInPosts />
       <ImageGallery />
+      <Achievements />
       <ProofOfWork />
       <Footer />
     </div>

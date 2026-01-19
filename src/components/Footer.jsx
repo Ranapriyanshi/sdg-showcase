@@ -23,6 +23,12 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4 className="footer-heading">Connect</h4>
+            <div>
+                Email: priyanshirana78@gmail.com
+            </div>
+            <div>
+                Contact: +91 9588503177
+            </div>
             <div className="footer-social">
               <a 
                 href="https://www.linkedin.com/in/priyanshi-rana" 
@@ -33,11 +39,20 @@ const Footer = () => {
                 LinkedIn
               </a>
             </div>
+            <div className="footer-social">
+              <a 
+                href="https://www.priyanshirana.in/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link linkedin"
+              >
+                Visit my Portfolio
+              </a>
           </div>
         </div>
+        </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Priyanshi Rana. All rights reserved.</p>
-          <p className="footer-sdg">Advocating for SDG 4, 5, and 9</p>
+          <p>&copy; 2026 Priyanshi. All rights reserved.</p>
         </div>
       </div>
     </footer>
