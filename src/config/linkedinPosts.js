@@ -41,7 +41,7 @@ export const linkedInPosts = [
   },
   {
     id: 4,
-    url: 'https://www.linkedin.com/feed/update/example4',
+    url: 'https://www.linkedin.com/posts/ranapriyanshi_growthmindset-genderbias-breakingbarriers-activity-7417157396310962176-016n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7q2-0BUbVCsEhSDh6XgxH3HvTRytU6ovY',
     // title: 'Women in Leadership',
     // excerpt: 'Empowering women to take on leadership roles...',
     // badge: 'Trending',
